@@ -1,0 +1,46 @@
+================================================================
+Options
+================================================================
+RisqETHOptions: 0x54fA24438370b5e7F64a1C78319d0c1048d14711
+RisqWBTCOptions: 0xE1ffBB1999a5AB58c3cd8343823CE8E87A53e656
+
+Events:
+- Create(id, account, settlementFee, totalFee)
+where settlementFee = amount to be distributed to RISQ holders and totalFee = total price to be paid
+- Exercise(id, profit)
+- Expire(id, premium)
+
+Misc:
+- Call impliedVolRate to get IV
+
+================================================================
+Oracles
+================================================================
+EACAggregatorProxy (ETH price oracle): 0x9ef1B8c0E4F7dc8bF5719Ea496883DC6401d5b2e
+EACAggregatorProxy (BTC price oracle): 0x264990fbd0A4796A3E3d8E37C4d5F87a3aCa5Ebf
+-> USD price = EACAggregatorProxy.latestAnswer / 10**EACAggregatorProxy.decimals
+
+================================================================
+Liquidity pools
+================================================================
+RisqETHPool: 0x7095b510f402463df8db51de869629f7094487c2
+RisqWBTCPool: 0x5D6e644eBeE654a78BeB1207F33ce79Ca475Fd4E
+
+Events:
+- Provide(account, amount, writeAmount)
+- Withdraw(account, amount, writeAmount)
+- Profit(id, amount)
+emitted in tandem with Expire from Options contract (i.e.: premium of Expire is amount of Profit)
+- Loss(id, amount)
+emitted in tandem with Exercise from Options contract (i.e.: profit of Exercise is amount of Loss)
+
+================================================================
+Staking
+================================================================
+RISQ token: 0xD9B4806A672A8Da6666c9d9d4B3B30eF6311611d
+RisqStakingETH: 0x32E1e4502AE8aB3d9AFdC71bf34419Ea2d7eA37F
+RisqStakingWBTC: 0xe70aA6fB68D134333C95E3739B62dE42Ee43743e
+
+Events:
+- Claim(account, amount)
+- Profit(amount)

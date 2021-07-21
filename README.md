@@ -1,2 +1,6 @@
-# risq-options-subgraph
-Subgraph for Risq Protocol Crypto Options
+[WIP] Subgraph for RISQ Protocol Crypto Options
+==============
+See `schema.graphql` for the entities that are queryable.
+==============
+
+
