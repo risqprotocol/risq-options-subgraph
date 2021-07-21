@@ -76,7 +76,7 @@ type ImpliedVolatility @entity {
 }
 
 type Asset @entity {
-  id: ID! # id is token address, with 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE for ETH
+  id: ID! # id is token address, with 0x2170ed0880ac9a755fd29b2688956bd959f933f8 for ETH
   symbol: String!
   name: String!
   decimals: Int!

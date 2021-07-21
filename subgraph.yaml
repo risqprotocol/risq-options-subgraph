@@ -10,7 +10,7 @@ dataSources:
     source:
       address: '0xe1ffbb1999a5ab58c3cd8343823ce8e87a53e656'
       abi: RisqOptions
-      startBlock: 11029620
+      startBlock: 8895617
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
@@ -42,7 +42,7 @@ dataSources:
     source:
       address: '0x54fa24438370b5e7f64a1c78319d0c1048d14711'
       abi: RisqOptions
-      startBlock: 11054458
+      startBlock: 8895617
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
@@ -69,12 +69,396 @@ dataSources:
         - function: setImpliedVolRate(uint256)
           handler: handleSetImpliedVolRate
   - kind: ethereum/contract
+    name: RisqBNBOptions
+    network: mainnet
+    source:
+      address: '0x209Ee82429FD4e26251ed01771338C94fCbAF717'
+      abi: RisqOptions
+      startBlock: 8896560
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/RisqBNBOptions.ts
+      entities:
+        - RisqOption
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Create(indexed uint256,indexed address,uint256,uint256)
+          handler: handleCreate
+        - event: Exercise(indexed uint256,uint256)
+          handler: handleExercise
+        - event: Expire(indexed uint256,uint256)
+          handler: handleExpire
+      callHandlers:
+        - function: setImpliedVolRate(uint256)
+          handler: handleSetImpliedVolRate
+  - kind: ethereum/contract
+    name: RisqBCHOptions
+    network: mainnet
+    source:
+      address: '0x6Ee22C3b113B299D6D831C065547aaA900e03c3D'
+      abi: RisqOptions
+      startBlock: 8896868
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/RisqBCHOptions.ts
+      entities:
+        - RisqOption
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Create(indexed uint256,indexed address,uint256,uint256)
+          handler: handleCreate
+        - event: Exercise(indexed uint256,uint256)
+          handler: handleExercise
+        - event: Expire(indexed uint256,uint256)
+          handler: handleExpire
+      callHandlers:
+        - function: setImpliedVolRate(uint256)
+          handler: handleSetImpliedVolRate
+  - kind: ethereum/contract
+    name: RisqLTCOptions
+    network: mainnet
+    source:
+      address: '0x53e834c347fb8282bdA20E2e70C8A82fb5E9837b'
+      abi: RisqOptions
+      startBlock: 8896868
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/RisqLTCOptions.ts
+      entities:
+        - RisqOption
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Create(indexed uint256,indexed address,uint256,uint256)
+          handler: handleCreate
+        - event: Exercise(indexed uint256,uint256)
+          handler: handleExercise
+        - event: Expire(indexed uint256,uint256)
+          handler: handleExpire
+      callHandlers:
+        - function: setImpliedVolRate(uint256)
+          handler: handleSetImpliedVolRate
+  - kind: ethereum/contract
+    name: RisqPAXGOptions
+    network: mainnet
+    source:
+      address: '0x1F4d8beaB9668Eeb41beF9Ad17A5389b0A09DC43'
+      abi: RisqOptions
+      startBlock: 8897869
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/RisqPAXGOptions.ts
+      entities:
+        - RisqOption
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Create(indexed uint256,indexed address,uint256,uint256)
+          handler: handleCreate
+        - event: Exercise(indexed uint256,uint256)
+          handler: handleExercise
+        - event: Expire(indexed uint256,uint256)
+          handler: handleExpire
+      callHandlers:
+        - function: setImpliedVolRate(uint256)
+          handler: handleSetImpliedVolRate
+  - kind: ethereum/contract
+    name: RisqCOMPOptions
+    network: mainnet
+    source:
+      address: '0x9E7Fe8C954C48F4dd7B259D2781f3fDBb247DebF'
+      abi: RisqOptions
+      startBlock: 8898493
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/RisqCOMPOptions.ts
+      entities:
+        - RisqOption
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Create(indexed uint256,indexed address,uint256,uint256)
+          handler: handleCreate
+        - event: Exercise(indexed uint256,uint256)
+          handler: handleExercise
+        - event: Expire(indexed uint256,uint256)
+          handler: handleExpire
+      callHandlers:
+        - function: setImpliedVolRate(uint256)
+          handler: handleSetImpliedVolRate
+  - kind: ethereum/contract
+    name: RisqCAKEOptions
+    network: mainnet
+    source:
+      address: '0xA26f309BB16349a2394561277eA6f190D8Ac56f6'
+      abi: RisqOptions
+      startBlock: 8898493
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/RisqCAKEOptions.ts
+      entities:
+        - RisqOption
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Create(indexed uint256,indexed address,uint256,uint256)
+          handler: handleCreate
+        - event: Exercise(indexed uint256,uint256)
+          handler: handleExercise
+        - event: Expire(indexed uint256,uint256)
+          handler: handleExpire
+      callHandlers:
+        - function: setImpliedVolRate(uint256)
+          handler: handleSetImpliedVolRate
+  - kind: ethereum/contract
+    name: RisqUNIOptions
+    network: mainnet
+    source:
+      address: '0x502f641ad75a751F914f8e87fF6416874d06bd17'
+      abi: RisqOptions
+      startBlock: 8898493
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/RisqUNIOptions.ts
+      entities:
+        - RisqOption
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Create(indexed uint256,indexed address,uint256,uint256)
+          handler: handleCreate
+        - event: Exercise(indexed uint256,uint256)
+          handler: handleExercise
+        - event: Expire(indexed uint256,uint256)
+          handler: handleExpire
+      callHandlers:
+        - function: setImpliedVolRate(uint256)
+          handler: handleSetImpliedVolRate
+  - kind: ethereum/contract
+    name: RisqLINKOptions
+    network: mainnet
+    source:
+      address: '0xF65cbCc2eC6dbF623F7C9a37327c181F11B8CE48'
+      abi: RisqOptions
+      startBlock: 8898493
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/RisqLINKOptions.ts
+      entities:
+        - RisqOption
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Create(indexed uint256,indexed address,uint256,uint256)
+          handler: handleCreate
+        - event: Exercise(indexed uint256,uint256)
+          handler: handleExercise
+        - event: Expire(indexed uint256,uint256)
+          handler: handleExpire
+      callHandlers:
+        - function: setImpliedVolRate(uint256)
+          handler: handleSetImpliedVolRate
+  - kind: ethereum/contract
+    name: RisqTSLAOptions
+    network: mainnet
+    source:
+      address: '0xc308E64037A7889bC8722201e34b047847Ea52bc'
+      abi: RisqOptions
+      startBlock: 8898493
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/RisqTSLAOptions.ts
+      entities:
+        - RisqOption
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Create(indexed uint256,indexed address,uint256,uint256)
+          handler: handleCreate
+        - event: Exercise(indexed uint256,uint256)
+          handler: handleExercise
+        - event: Expire(indexed uint256,uint256)
+          handler: handleExpire
+      callHandlers:
+        - function: setImpliedVolRate(uint256)
+          handler: handleSetImpliedVolRate
+  - kind: ethereum/contract
+    name: RisqAMZNOptions
+    network: mainnet
+    source:
+      address: '0xF2E1Cd501491DFc74a4B6c7291fd9436853b8948'
+      abi: RisqOptions
+      startBlock: 8898493
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/RisqAMZNOptions.ts
+      entities:
+        - RisqOption
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Create(indexed uint256,indexed address,uint256,uint256)
+          handler: handleCreate
+        - event: Exercise(indexed uint256,uint256)
+          handler: handleExercise
+        - event: Expire(indexed uint256,uint256)
+          handler: handleExpire
+      callHandlers:
+        - function: setImpliedVolRate(uint256)
+          handler: handleSetImpliedVolRate
+   - kind: ethereum/contract
+    name: RisqGOOGLOptions
+    network: mainnet
+    source:
+      address: '0xc2C6483B8E984D170d1DDB92C819bE1ABc7e37FF'
+      abi: RisqOptions
+      startBlock: 8898493
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/RisqGOOGLOptions.ts
+      entities:
+        - RisqOption
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Create(indexed uint256,indexed address,uint256,uint256)
+          handler: handleCreate
+        - event: Exercise(indexed uint256,uint256)
+          handler: handleExercise
+        - event: Expire(indexed uint256,uint256)
+          handler: handleExpire
+      callHandlers:
+        - function: setImpliedVolRate(uint256)
+          handler: handleSetImpliedVolRate
+  - kind: ethereum/contract
+    name: RisqYFIOptions
+    network: mainnet
+    source:
+      address: '0x41f6a36094cE2B1Ae6711674E5C19234B232AEb3'
+      abi: RisqOptions
+      startBlock: 8898493
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/RisqYFIOptions.ts
+      entities:
+        - RisqOption
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Create(indexed uint256,indexed address,uint256,uint256)
+          handler: handleCreate
+        - event: Exercise(indexed uint256,uint256)
+          handler: handleExercise
+        - event: Expire(indexed uint256,uint256)
+          handler: handleExpire
+      callHandlers:
+        - function: setImpliedVolRate(uint256)
+          handler: handleSetImpliedVolRate
+  - kind: ethereum/contract
     name: WBTCLiquidityPool
     network: mainnet
     source:
       address: '0x5d6e644ebee654a78beb1207f33ce79ca475fd4e'
       abi: LiquidityPool
-      startBlock: 11029620
+      startBlock: 8895617
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
@@ -104,12 +488,372 @@ dataSources:
     source:
       address: '0x7095b510f402463df8db51de869629f7094487c2'
       abi: LiquidityPool
-      startBlock: 11054458
+      startBlock: 8895617
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
       language: wasm/assemblyscript
       file: ./src/mappings/ETHLiquidityPool.ts
+      entities:
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+  - kind: ethereum/contract
+    name: BNBLiquidityPool
+    network: mainnet
+    source:
+      address: '0x6249C0e395Ab75f047183B21d2755babBD795A6f'
+      abi: LiquidityPool
+      startBlock: 8894405
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/BNBLiquidityPool.ts
+      entities:
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+  - kind: ethereum/contract
+    name: BCHLiquidityPool
+    network: mainnet
+    source:
+      address: '0x262ECE00f404D01e6824e345a36C7330d8BCe34e'
+      abi: LiquidityPool
+      startBlock: 8896868
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/BCHLiquidityPool.ts
+      entities:
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+  - kind: ethereum/contract
+    name: LTCLiquidityPool
+    network: mainnet
+    source:
+      address: '0xDE6046fE176d3D84A71312e589d9c3C629e92768'
+      abi: LiquidityPool
+      startBlock: 8898054
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/LTCLiquidityPool.ts
+      entities:
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+  - kind: ethereum/contract
+    name: PAXGLiquidityPool
+    network: mainnet
+    source:
+      address: '0xC62A72186B25e5bC966b53Ee91415B4724ff52C7'
+      abi: LiquidityPool
+      startBlock: 8897869
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/PAXGLiquidityPool.ts
+      entities:
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+  - kind: ethereum/contract
+    name: COMPLiquidityPool
+    network: mainnet
+    source:
+      address: '0xfe477c25b5286cc2304987af7cd05274962cf593'
+      abi: LiquidityPool
+      startBlock: 8898493
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/COMPLiquidityPool.ts
+      entities:
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+  - kind: ethereum/contract
+    name: CAKELiquidityPool
+    network: mainnet
+    source:
+      address: '0xD6A2782a2f6229CBF258633EB71725E92D6A19d2'
+      abi: LiquidityPool
+      startBlock: 8898493
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/CAKELiquidityPool.ts
+      entities:
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+  - kind: ethereum/contract
+    name: UNILiquidityPool
+    network: mainnet
+    source:
+      address: '0xf0cc28dee2df4e3482a09809cf6F26A41Fa65e4d'
+      abi: LiquidityPool
+      startBlock: 8898493
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/UNILiquidityPool.ts
+      entities:
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+  - kind: ethereum/contract
+    name: LINKLiquidityPool
+    network: mainnet
+    source:
+      address: '0xf60c7Ed4954f5DfEfea116aE851A8D4DBB864541'
+      abi: LiquidityPool
+      startBlock: 8898493
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/LINKLiquidityPool.ts
+      entities:
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+  - kind: ethereum/contract
+    name: TSLALiquidityPool
+    network: mainnet
+    source:
+      address: '0x91313522182d5aFa7862012619fFedBf745c41F2'
+      abi: LiquidityPool
+      startBlock: 8898493
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/TSLALiquidityPool.ts
+      entities:
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+  - kind: ethereum/contract
+    name: AMZNLiquidityPool
+    network: mainnet
+    source:
+      address: '0x3d0bA06e66DC6405D64Db542473fDDe6243147F3'
+      abi: LiquidityPool
+      startBlock: 8898493
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/AMZNLiquidityPool.ts
+      entities:
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+   - kind: ethereum/contract
+    name: GOOGLLiquidityPool
+    network: mainnet
+    source:
+      address: '0x27883d6d5A0FEf1Cf565928259BBe1deaa2CF715'
+      abi: LiquidityPool
+      startBlock: 8898493
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/GOOGLLiquidityPool.ts
+      entities:
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+  - kind: ethereum/contract
+    name: YFILiquidityPool
+    network: mainnet
+    source:
+      address: '0x9a1f6843fc4bbe923b35e1f55462aecee09fe2fe'
+      abi: LiquidityPool
+      startBlock: 8898493
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/YFILiquidityPool.ts
       entities:
         - LiquidityPool
       abis:
