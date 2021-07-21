@@ -388,7 +388,7 @@ dataSources:
       callHandlers:
         - function: setImpliedVolRate(uint256)
           handler: handleSetImpliedVolRate
-   - kind: ethereum/contract
+  - kind: ethereum/contract
     name: RisqGOOGLOptions
     network: mainnet
     source:
@@ -812,7 +812,7 @@ dataSources:
           handler: handleProvide
         - event: Withdraw(indexed address,uint256,uint256)
           handler: handleWithdraw
-   - kind: ethereum/contract
+  - kind: ethereum/contract
     name: GOOGLLiquidityPool
     network: mainnet
     source:
