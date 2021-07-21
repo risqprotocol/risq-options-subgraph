@@ -4,16 +4,16 @@
   "license": "MIT",
   "scripts": {
     "codegen": "graph codegen --output-dir src/types/",
-    "create-local": "graph create risqprotocol/risq --node http://127.0.0.1:8020",
+    "create-local": "graph create risqprotocol/risq-options-subgraph --node http://127.0.0.1:8020",
     "build": "graph build",
-    "deploy-local": "graph deploy risqprotocol/risq --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
-    "deploy": "graph deploy risqprotocol/risq --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug",
+    "deploy-local": "graph deploy risqprotocol/risq-options-subgraph --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
+    "deploy": "graph deploy risqprotocol/risq-options-subgraph --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug",
     "deploy-staging": "graph deploy $THE_GRAPH_GITHUB_USER/$THE_GRAPH_SUBGRAPH_NAME /Protean --ipfs https://api.staging.thegraph.com/ipfs/ --node https://api.staging.thegraph.com/deploy/",
-    "watch-local": "graph deploy graphprotocol/risq --watch --debug --node http://127.0.0.1:8020/ --ipfs http://localhost:5001"
+    "watch-local": "graph deploy graphprotocol/risq-options-subgraph --watch --debug --node http://127.0.0.1:8020/ --ipfs http://localhost:5001"
   },
   "devDependencies": {
-    "@graphprotocol/graph-cli": "^0.16.0",
-    "@graphprotocol/graph-ts": "^0.16.0",
+    "@graphprotocol/graph-cli": "^0.20.1",
+    "@graphprotocol/graph-ts": "^0.20.1",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
     "eslint": "^6.2.2",
@@ -21,5 +21,9 @@
     "prettier": "^1.18.2",
     "typescript": "^3.5.2"
   },
-  "dependencies": {}
+  "dependencies": {},
+
+  "resolutions": {
+    "assemblyscript": "git+https://github.com/AssemblyScript/assemblyscript.git#v0.6"
+  }
 }

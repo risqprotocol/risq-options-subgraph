@@ -760,7 +760,7 @@ export class LiquidityPool extends Entity {
 
   get latestProvide(): string | null {
     let value = this.get("latestProvide");
-    if (value === null) {
+    if (value === null || value.kind == ValueKind.NULL) {
       return null;
     } else {
       return value.toString();
@@ -795,7 +795,7 @@ export class LiquidityPool extends Entity {
 
   get latestWithdraw(): string | null {
     let value = this.get("latestWithdraw");
-    if (value === null) {
+    if (value === null || value.kind == ValueKind.NULL) {
       return null;
     } else {
       return value.toString();
@@ -839,7 +839,7 @@ export class LiquidityPool extends Entity {
 
   get latestProfit(): string | null {
     let value = this.get("latestProfit");
-    if (value === null) {
+    if (value === null || value.kind == ValueKind.NULL) {
       return null;
     } else {
       return value.toString();
@@ -883,7 +883,7 @@ export class LiquidityPool extends Entity {
 
   get latestLoss(): string | null {
     let value = this.get("latestLoss");
-    if (value === null) {
+    if (value === null || value.kind == ValueKind.NULL) {
       return null;
     } else {
       return value.toString();
@@ -963,7 +963,7 @@ export class LiquidityPool extends Entity {
 
   get latestImpliedVolatility(): string | null {
     let value = this.get("latestImpliedVolatility");
-    if (value === null) {
+    if (value === null || value.kind == ValueKind.NULL) {
       return null;
     } else {
       return value.toString();
