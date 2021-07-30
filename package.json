@@ -1,29 +1,16 @@
 {
-  "name": "risq-options-subgraph",
-  "version": "1.0.0",
-  "license": "MIT",
+  "name": "roption",
+  "license": "UNLICENSED",
   "scripts": {
-    "codegen": "graph codegen --output-dir src/types/",
-    "create-local": "graph create risqprotocol/risq-options-subgraph --node http://127.0.0.1:8020",
+    "codegen": "graph codegen",
     "build": "graph build",
-    "deploy-local": "graph deploy risqprotocol/risq-options-subgraph --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
-    "deploy": "graph deploy risqprotocol/risq-options-subgraph --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug",
-    "deploy-staging": "graph deploy $THE_GRAPH_GITHUB_USER/$THE_GRAPH_SUBGRAPH_NAME /Protean --ipfs https://api.staging.thegraph.com/ipfs/ --node https://api.staging.thegraph.com/deploy/",
-    "watch-local": "graph deploy graphprotocol/risq-options-subgraph --watch --debug --node http://127.0.0.1:8020/ --ipfs http://localhost:5001"
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ everyhealth/roption",
+    "create-local": "graph create --node http://localhost:8020/ everyhealth/roption",
+    "remove-local": "graph remove --node http://localhost:8020/ everyhealth/roption",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 everyhealth/roption"
   },
-  "devDependencies": {
-    "@graphprotocol/graph-cli": "^0.20.1",
-    "@graphprotocol/graph-ts": "^0.20.1",
-    "@typescript-eslint/eslint-plugin": "^2.0.0",
-    "@typescript-eslint/parser": "^2.0.0",
-    "eslint": "^6.2.2",
-    "eslint-config-prettier": "^6.1.0",
-    "prettier": "^1.18.2",
-    "typescript": "^3.5.2"
-  },
-  "dependencies": {},
-
-  "resolutions": {
-    "assemblyscript": "git+https://github.com/AssemblyScript/assemblyscript.git#v0.6"
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.21.0",
+    "@graphprotocol/graph-ts": "0.20.0"
   }
 }
