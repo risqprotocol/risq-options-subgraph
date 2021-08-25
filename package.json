@@ -4,10 +4,10 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ everyhealth/roption",
-    "create-local": "graph create --node http://localhost:8020/ everyhealth/roption",
-    "remove-local": "graph remove --node http://localhost:8020/ everyhealth/roption",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 everyhealth/roption"
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ risqprotocol/risq-options-subgraph",
+    "create-local": "graph create --node http://localhost:8020/ risqprotocol/risq-options-subgraph",
+    "remove-local": "graph remove --node http://localhost:8020/ risqprotocol/risq-options-subgraph",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 risqprotocol/risq-options-subgraph"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.21.0",

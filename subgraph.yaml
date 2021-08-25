@@ -6,9 +6,9 @@ dataSources:
     name: RisqLINKOptions
     network: bsc
     source:
-      address: "0xF65cbCc2eC6dbF623F7C9a37327c181F11B8CE48"
+      address: "0x9aC131089Db5023C42df3b1E074405bd0992ecA9"
       abi: RisqLINKOptions
-      startBlock: 9097096
+      startBlock: 10339332
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -27,9 +27,9 @@ dataSources:
     name: RisqBNBOptions
     network: bsc
     source:
-      address: "0x209Ee82429FD4e26251ed01771338C94fCbAF717"
+      address: "0x3a409fb9399fcA3b54781d3F26f5491345FD2b8a"
       abi: RisqLINKOptions
-      startBlock: 9097096
+      startBlock: 10339332
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -48,9 +48,9 @@ dataSources:
     name: RisqYFIOptions
     network: bsc
     source:
-      address: "0x41f6a36094cE2B1Ae6711674E5C19234B232AEb3"
+      address: "0x8cFAC68e939d73E278E6A294CeB5D2F9a81C4aE1"
       abi: RisqLINKOptions
-      startBlock: 9097096
+      startBlock: 10339332
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -69,9 +69,9 @@ dataSources:
     name: RisqBCHOptions
     network: bsc
     source:
-      address: "0x6Ee22C3b113B299D6D831C065547aaA900e03c3D"
+      address: "0x3a409fb9399fcA3b54781d3F26f5491345FD2b8a"
       abi: RisqLINKOptions
-      startBlock: 9097096
+      startBlock: 10339332
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -90,9 +90,9 @@ dataSources:
     name: RisqUNIOptions
     network: bsc
     source:
-      address: "0x502f641ad75a751F914f8e87fF6416874d06bd17"
+      address: "0x602849036425F037eFE22C329b766A4af05c322e"
       abi: RisqLINKOptions
-      startBlock: 9097096
+      startBlock: 10339332
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -111,9 +111,9 @@ dataSources:
     name: RisqLTCOptions
     network: bsc
     source:
-      address: "0x8009A019d83C9826788cbb9BC868d9065AC7088f"
+      address: "0xb43049c9461014786564BD0261a7a8507ec4D1c1"
       abi: RisqLINKOptions
-      startBlock: 9097096
+      startBlock: 10339332
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -132,9 +132,9 @@ dataSources:
     name: RisqETHOptions
     network: bsc
     source:
-      address: "0x54fA24438370b5e7F64a1C78319d0c1048d14711"
+      address: "0x093642E24e3693FBB74DEAd42Be8EC523AeA7fBB"
       abi: RisqLINKOptions
-      startBlock: 9097096
+      startBlock: 10339332
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -153,9 +153,9 @@ dataSources:
     name: RisqPAXGOptions
     network: bsc
     source:
-      address: "0x1F4d8beaB9668Eeb41beF9Ad17A5389b0A09DC43"
+      address: "0xf2189CBA9db981F54190d8bEE7f242C98f2FAe06"
       abi: RisqLINKOptions
-      startBlock: 9097096
+      startBlock: 10339332
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -174,9 +174,9 @@ dataSources:
     name: RisqCOMPOptions
     network: bsc
     source:
-      address: "0x9E7Fe8C954C48F4dd7B259D2781f3fDBb247DebF"
+      address: "0x7885673A1D344fcF07bF0ADD50A1483a5eF6FCE7"
       abi: RisqLINKOptions
-      startBlock: 9097096
+      startBlock: 10339332
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -195,9 +195,9 @@ dataSources:
     name: RisqCAKEOptions
     network: bsc
     source:
-      address: "0xA26f309BB16349a2394561277eA6f190D8Ac56f6"
+      address: "0x8dB0c5c6B0538e1Ad54EFa18C2Ce501e6C3c6Cd8"
       abi: RisqLINKOptions
-      startBlock: 9097096
+      startBlock: 10339332
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -216,9 +216,9 @@ dataSources:
     name: RisqTSLAOptions
     network: bsc
     source:
-      address: "0xc308E64037A7889bC8722201e34b047847Ea52bc"
+      address: "0xBaC83e9F09B2C807e1A2A291A26D87c181A3CCc5"
       abi: RisqLINKOptions
-      startBlock: 9097096
+      startBlock: 10339332
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -237,9 +237,9 @@ dataSources:
     name: RisqAMZNOptions
     network: bsc
     source:
-      address: "0xF2E1Cd501491DFc74a4B6c7291fd9436853b8948"
+      address: "0xbD8460FDE4a41A1bA76F84D3e691338a1766A1bA"
       abi: RisqLINKOptions
-      startBlock: 9097096
+      startBlock: 10339332
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -258,9 +258,9 @@ dataSources:
     name: RisqGOOGLOptions
     network: bsc
     source:
-      address: "0xc2C6483B8E984D170d1DDB92C819bE1ABc7e37FF"
+      address: "0x18086EaC31EF5405D4440C9bb5f0C575e5a7AaBD"
       abi: RisqLINKOptions
-      startBlock: 9097096
+      startBlock: 10339332
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -279,9 +279,9 @@ dataSources:
     name: RisqWBTCOptions
     network: bsc
     source:
-      address: "0xE1ffBB1999a5AB58c3cd8343823CE8E87A53e656"
+      address: "0x3f0230bBc725477D66e6aF22f1e7D4eb885414aD"
       abi: RisqLINKOptions
-      startBlock: 9097096
+      startBlock: 10339332
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
