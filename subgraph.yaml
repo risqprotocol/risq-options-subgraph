@@ -27,7 +27,7 @@ dataSources:
     name: RisqBNBOptions
     network: bsc
     source:
-      address: "0x3a409fb9399fcA3b54781d3F26f5491345FD2b8a"
+      address: "0xB0b9C561A26e580a396369E76fc7feDE444db05e"
       abi: RisqLINKOptions
       startBlock: 10339332
     mapping:
